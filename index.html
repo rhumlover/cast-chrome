@@ -19,21 +19,24 @@
                left: 0;
                width: 100%;
                height: 100%;
+               background-color: rgba(0,0,0, 1);
             }
         </style>
 
         <!-- Scripts -->
         <script src="https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js"></script>
         <script type="text/javascript">
-            var receiver = new cast.receiver.Receiver(
-                '358a5251-4f55-4e2d-9276-62da9b153a22',
+            var receiver = new cast.receiver.Receiver
+            (
+                '358a5251-4f55-4e2d-9276-62da9b153a22_2',
                 [cast.receiver.RemoteMedia.NAMESPACE],
                 "",
                 5
             );
 
             var remoteMedia = new cast.receiver.RemoteMedia();
-            remoteMedia.addChannelFactory(
+            remoteMedia.addChannelFactory
+            (
                 receiver.createChannelFactory(cast.receiver.RemoteMedia.NAMESPACE)
             );
 
