@@ -52,7 +52,30 @@
 
     <body>
 
-        <video id="player"/>
+        <video id="player"></video>
+        <div id="player-ui"></div>
+
+        <script>
+            var player = document.getElementById('player');
+
+            player.addEventListener('loadedmetadata', function()
+            {
+                console.log
+                (
+                    cast.receiver.RemoteMedia.getTitle,
+                    cast.receiver.RemoteMedia.getImageURL,
+                    cast.receiver.RemoteMedia.getContentInfo
+                );
+            })
+
+            player.addEventListener('ended', function()
+            {
+                setTimeout(function()
+                {
+                    console.log('display inactivity message');
+                }, 5000);
+            });
+        </script
 
     </body>
 </html>
