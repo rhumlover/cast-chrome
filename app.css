@@ -16,16 +16,17 @@ body
 .player
 {
     z-index: 9;
+    background-color: black;
 }
 .player-ui
 {
-    background: -webkit-radial-gradient(center, circle, #004D6F, #006D9E);
+    /*background: -webkit-radial-gradient(center, circle, #004D6F, #006D9E);*/
 }
 .player-ui:after
 {
-    display: block;
+    /*display: block;
     content: '';
-    background: url('images/logo-dm-nobg.png') no-repeat 50% 50%;
+    background: url('images/logo-dm-nobg.png') no-repeat 50% 50%;*/
 }
 .splash
 {
