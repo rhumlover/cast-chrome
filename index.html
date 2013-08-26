@@ -1,72 +1,71 @@
-<!--
-Copyright (C) 2013 Google Inc. All Rights Reserved.
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dailymotion Chromecast App by rhumlover</title>
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Dailymotion Chromecast App</h1>
+        <p>Stream Dailymotion Videos On Your Google Chromecast Device!</p>
 
-     http://www.apache.org/licenses/LICENSE-2.0
+        <p class="view"><a href="https://github.com/rhumlover/cast-chrome">View the Project on GitHub <small>rhumlover/cast-chrome</small></a></p>
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 
-<!DOCTYPE html>
-<html ng-app data-cast-api-enabled="true">
-<head>
-  <title>Cast Chrome Sender API Demo</title>
-  <link rel="stylesheet" type="text/css" href="demo_app.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-  <script src="demo_app.js"></script>
-</head>
-<body ng-controller="DemoAppCtrl">
-  <div ng-switch on="castApiDetected" >
-    <span ng-switch-default><b>No Cast API is detected.</b></span>
+        <ul>
+          <li><a href="https://github.com/rhumlover/cast-chrome/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rhumlover/cast-chrome/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rhumlover/cast-chrome">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-    <div ng-switch-when="true">
-      <form ng-submit="setApplication()">
-        <div>
-          <h3 style="display: inline-block">Cast application name:</h3>
-          <input type="text" ng-model="$parent.appName" size="30" placeholder="Your application name"/>
-        </div>
-        <div>
-          <h3 style="display: inline-block">Launch parameters (optional):</h3>
-          <input type="text" ng-model="$parent.launchParameters" size="60" placeholder="Launch parameters"/>
-        </div>
-        <div>
-          <input type="submit" value="Set"/>
-        </div>
-      </form>
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-      <div ng-show="showReceiverPicker" id="receiverPicker">
-        <h3>Select a device to launch this activity:</h3>
-        <div ng-repeat="receiver in $parent.receiverList" ng-click="launchActivityAt(receiver)" class="device">
-          {{receiver.name}}
-        </div>
-      </div>
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
 
-      <div ng-show="showActivityControls">
-        <h3>Remote controls</h3>
-        <button ng-click="stopActivity()">Stop</button>
-        <button ng-click="playMedia()" ng-show="$parent.hasPause">Play</button>
-        <button ng-click="pauseMedia()" ng-show="$parent.hasPause">Pause</button>
-        <button ng-click="muteMedia()">Mute</button>
-        <button ng-click="unmuteMedia()">Unmute</button>
-        <input ng-model="$parent.mediaVolume" min="0.0" max="1.0" type="number" size="3"/>Volume
-        <div>
-          <button ng-click="getActivityStatus()">Get Activity Status</button>
-          <span>{{$parent.activityStatus}}</span>
-        </div>
-        <div>
-          <button ng-click="getMediaStatus()">Get Media Status</button>
-          <span>{{$parent.mediaStatus}}</span>
-        </div>
-      </div>
-      <h4>{{$parent.errorMessage}}</h4>
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rhumlover">rhumlover</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-  </div>
-</body>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
 </html>
