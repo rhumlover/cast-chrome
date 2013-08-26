@@ -2,3 +2,4 @@ src
 sass
 .sass-cache
 config.rb
+*.coffee
