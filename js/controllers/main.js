@@ -185,7 +185,7 @@
             case "setMediaVolume":
             case "getMediaStatus":
               $scope.mediaStatus = result.status;
-              $scope.hasPause = result.status && result.status.hasPause !== 'undefined';
+              $scope.hasPause = result.status && (result.status.hasPause != null);
           }
         }
         return $scope.$apply();
@@ -296,7 +296,7 @@
       }
       return $scope.castApi.launch(request, resultCallback);
     };
-    if (window.cast !== undefined && cast.isAvailable) {
+    if ((window.cast != null) && cast.isAvailable) {
       return $scope.initializeApi();
     } else {
       return window.addEventListener("message", $scope.onWindowMessage, false);
@@ -304,7 +304,3 @@
   });
 
 }).call(this);
-
-/*
-//@ sourceMappingURL=main.map
-*/

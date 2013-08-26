@@ -17,10 +17,12 @@
     }
   ]);
 
+  DM.init({
+    apiKey: 'd2117b78de822e22bd58',
+    status: true,
+    cookie: true
+  });
+
   window.DMCast = DMCast;
 
 }).call(this);
-
-/*
-//@ sourceMappingURL=app.map
-*/
