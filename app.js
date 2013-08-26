@@ -4,7 +4,7 @@
   var DMCast, app, receiver;
 
   DMCast = (function() {
-    DMCast.prototype.APPID = '358a5251-4f55-4e2d-9276-62da9b153a22_2';
+    DMCast.prototype.APPID = '358a5251-4f55-4e2d-9276-62da9b153a22_1';
 
     DMCast.prototype.PROTOCOL = cast.receiver.RemoteMedia.NAMESPACE;
 
