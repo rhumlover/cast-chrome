@@ -7,75 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500,700,900' rel='stylesheet' type='text/css'>
+        <link href='app.css' rel='stylesheet' type='text/css'>
 
-        <!-- Styles -->
-        <style>
-            #player
-            {
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               background-color: rgba(0,0,0, 1);
-            }
-        </style>
-
-        <!-- Scripts -->
         <script src="https://www.gstatic.com/cast/js/receiver/1.0/cast_receiver.js"></script>
-        <script type="text/javascript">
-            var receiver = new cast.receiver.Receiver
-            (
-                '358a5251-4f55-4e2d-9276-62da9b153a22_2',
-                [cast.receiver.RemoteMedia.NAMESPACE],
-                "",
-                5
-            );
-
-            var remoteMedia = new cast.receiver.RemoteMedia();
-            remoteMedia.addChannelFactory
-            (
-                receiver.createChannelFactory(cast.receiver.RemoteMedia.NAMESPACE)
-            );
-
-            receiver.start();
-
-            window.addEventListener('load', function()
-            {
-                var elem = document.getElementById('player');
-                remoteMedia.setMediaElement(elem);
-            });
-        </script>
+        <script src="app.js"></script>
     </head>
 
     <body>
 
-        <video id="player"></video>
-        <div id="player-ui"></div>
+        <div class="splash"></div>
 
-        <script>
-            var player = document.getElementById('player');
-
-            player.addEventListener('loadedmetadata', function()
-            {
-                console.log
-                (
-                    cast.receiver.RemoteMedia.getTitle,
-                    cast.receiver.RemoteMedia.getImageURL,
-                    cast.receiver.RemoteMedia.getContentInfo
-                );
-            })
-
-            player.addEventListener('ended', function()
-            {
-                setTimeout(function()
-                {
-                    console.log('display inactivity message');
-                }, 5000);
-            });
-        </script
-
+        <video class="player"></video>
+        <div class="player-ui"></div>
     </body>
 </html>
