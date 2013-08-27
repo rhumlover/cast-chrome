@@ -230,6 +230,19 @@ function DemoAppCtrl($scope) {
   /**
    * Handles a play media request.
    */
+  $scope.loadMedia = function() {
+    if (!$scope.activityId) {
+      return;
+    }
+    $scope.castApi.loadMedia(
+        $scope.activityId,
+        new cast.MediaLoadRequest(),
+        $scope.getMediaResultCallback('loadMedia'));
+  };
+
+  /**
+   * Handles a play media request.
+   */
   $scope.playMedia = function() {
     if (!$scope.activityId) {
       return;

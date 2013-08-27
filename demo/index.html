@@ -20,6 +20,7 @@ limitations under the License.
   <title>Cast Chrome Sender API Demo</title>
   <link rel="stylesheet" type="text/css" href="demo_app.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  <script src="iapi.js"></script>
   <script src="demo_app.js"></script>
 </head>
 <body ng-controller="DemoAppCtrl">
@@ -50,6 +51,8 @@ limitations under the License.
 
       <div ng-show="showActivityControls">
         <h3>Remote controls</h3>
+        <button ng-click="loadMedia()">Load Video</button>
+        <hr/>
         <button ng-click="stopActivity()">Stop</button>
         <button ng-click="playMedia()" ng-show="$parent.hasPause">Play</button>
         <button ng-click="pauseMedia()" ng-show="$parent.hasPause">Pause</button>
